@@ -1,6 +1,6 @@
 import gulp from "gulp";
 import plumber from "gulp-plumber";
-import sass from "gulp-dart-sass";
+import less from "gulp-less";
 import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import csso from "postcss-csso";
@@ -10,18 +10,18 @@ import terser from "gulp-terser";
 import squoosh from "gulp-libsquoosh";
 import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
+import del from "del";
 import browser from "browser-sync";
-import { deleteAsync } from "del";
 
 // Styles
 
 export const styles = () => {
   return gulp
-    .src("source/sass/style.scss", { sourcemaps: true })
+    .src("source/less/style.less", { sourcemaps: true })
     .pipe(plumber())
-    .pipe(sass().on("error", sass.logError))
+    .pipe(less())
     .pipe(postcss([autoprefixer(), csso()]))
-    .pipe(rename("style.min.css"))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest("build/css", { sourcemaps: "." }))
     .pipe(browser.stream());
 };
@@ -29,9 +29,8 @@ export const styles = () => {
 // HTML
 
 const html = () => {
-  return gulp
-    .src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 };
 
@@ -102,7 +101,7 @@ const copy = (done) => {
 // Clean
 
 const clean = () => {
-  return deleteAsync("build");
+  return del("build");
 };
 
 // Server
@@ -129,8 +128,8 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/*.js", gulp.series(scripts));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/script.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
 

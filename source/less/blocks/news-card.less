@@ -1,0 +1,41 @@
+.news-card {
+  font-family: "Raleway", "Arial", sans-serif;
+  border: 2px solid @green;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 32px 20px 72px 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.news-card::after {
+  content: url("../img/icons/one-leaf.svg");
+  position: absolute;
+  width: 76px;
+  height: 32px;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.news-card__title {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 37px;
+  text-align: center;
+}
+
+.news-card__review {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+}
+
+.news-card__data {
+  font-size: 14px;
+  margin-top: auto;
+  text-align: end;
+}

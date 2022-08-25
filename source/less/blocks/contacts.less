@@ -1,0 +1,74 @@
+.contacts {
+  .line-leaf ();
+  position: relative;
+  padding-top: 96px;
+  padding-bottom: 64px;
+}
+
+.contacts__title {
+  margin-bottom: 64px;
+}
+
+.contacts__text {
+  font-family: "Raleway", "Arial", sans-serif;
+  margin: 0;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 34px
+}
+
+.contacts__list {
+  .list ();
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 18px;
+  column-gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.contacts__link {
+  display: block;
+  text-decoration: none;
+  color: @black;
+  display: flex;
+  column-gap: 13px;
+  align-items: center;
+
+  address {
+    font-style: normal;
+  }
+
+  span {
+    display: block;
+  }
+
+  &:hover {
+    span {
+      color: @green-hover;
+    }
+
+    svg {
+      stroke: @green-hover;
+    }
+  }
+
+  &:active {
+    span {
+      color: @green;
+    }
+
+    svg {
+      stroke: @green;
+    }
+  }
+}
+
+.contacts__map-image {
+  width: 100%;
+  height: 372px;
+  object-fit: cover;
+  border-radius: 40px;
+}

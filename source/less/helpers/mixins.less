@@ -1,0 +1,29 @@
+.tablet (@rules) {
+  @media (min-width: @tablet-width) {
+    @rules();
+  }
+}
+
+.desktop (@rules) {
+  @media (min-width: @desktop-width) {
+    @rules();
+  }
+}
+
+.line-leaf () {
+  &::before {
+    content: url(../img/icons/line-leaf.svg);
+    position: absolute;
+    width: 228px;
+    height: 34px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.list () {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

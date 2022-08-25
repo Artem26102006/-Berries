@@ -1,0 +1,34 @@
+.benefits {
+  .list ();
+  font-family: "Raleway", "Arial", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.benefits__item {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+
+  &--leaf::before {
+    content: url("../img/icons/leaf.svg");
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+
+  &--snowflake::before {
+    content: url("../img/icons/snowflake.svg");
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+
+  &--delivery::before {
+    content: url("../img/icons/delivery.svg");
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+}
