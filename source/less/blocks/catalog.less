@@ -1,5 +1,9 @@
 .catalog {
   padding: 64px 0;
+
+  .tablet ({
+    padding: 100px 0;
+  });;
 }
 
 .catalog__title {
@@ -11,13 +15,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
   gap: 24px;
+  margin: 0 2px;
 
   .tablet ({
+    margin: 0 68px;
     gap: 52px;
-  })
+  });
 }
 
-.catalog__item {
-  width: calc(100% - 4px);
+@media (max-width: 767px) {
+  .catalog__item--none {
+    display: none;
+  }
 }
-

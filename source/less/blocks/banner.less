@@ -5,17 +5,52 @@
   min-height: 640px;
   padding-top: 68px;
   box-sizing: border-box;
+
+  .tablet ({
+    background: url("../img/background-image-tablet.jpg") no-repeat;
+    min-height: 940px;
+    background-position: center 50%;
+    background-size: cover;
+    padding-top: 142px
+  });;
+}
+
+.banner__container {
+  .tablet ({
+  display: flex;
+  });;
+}
+
+.banner__wrapper {
+  .tablet ({
+    width: calc(100% - 184px);
+    margin-left: auto;
+  });
 }
 
 .banner__benefits {
   width: calc(100% - 58px);
   margin: 0 auto;
+
+  .tablet ({
+    width: auto;
+    margin: 0;
+  });;
 }
 
 .banner__title {
   margin-bottom: 32px;
+
+  .tablet ({
+    text-align: start;
+    margin-bottom: 48px;
+  });;
 }
 
-.banner__button {
+.banner__link {
   margin-top: 48px;
+
+  .tablet ({
+    width: 336px;
+  });;
 }

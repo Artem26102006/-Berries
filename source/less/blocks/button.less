@@ -1,15 +1,28 @@
 .button {
+  display: block;
   font-family: "Raleway", "Arial", sans-serif;
   background: none;
   border: none;
-  padding: 16px 0 16px 0;
+  text-decoration: none;
+  padding: 14px 0;
   cursor: pointer;
   background-color: @purple;
   color: @white;
   font-size: 20px;
   width: 100%;
   border-radius: 40px;
+  text-align: center;
   letter-spacing: 1px;
+
+  &:hover {
+    background-color: @purple-hover;
+  }
+
+  .tablet ({
+    padding: 16px 0;
+  });
+
+  .desktop ({
+    padding: 16px 0 18px 0;
+  });
 }
-
-

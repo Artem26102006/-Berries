@@ -3,6 +3,11 @@
   padding-top: 96px;
   padding-bottom: 64px;
   position: relative;
+
+  .tablet ({
+    padding-top: 114px;
+    padding-bottom: 110px;
+  });
 }
 
 .news__title {
@@ -15,12 +20,30 @@
   flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
+
+  .tablet ({
+    column-gap: 20px;
+    row-gap: 34px;
+  });
+
+  @media (min-width: 1030px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .news__card {
-  width: 268px;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    width: calc(100% - 55%);
+  }
 
   .tablet ({
-    width: 348px;
-  })
+    width: calc(100% - 51.4%);
+  });
+
+  @media (min-width: 1030px) {
+    width: auto;
+  }
 }
