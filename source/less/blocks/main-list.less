@@ -2,6 +2,23 @@
   .list ();
   font-family: "Raleway";
   display: none;
+
+  .tablet ({
+    display: flex;
+
+  });
+}
+
+.main-list--open {
+  position: absolute;
+  display: block;
+  left: 0;
+  z-index: 2;
+  top: 67px;
+  background-color: rgb(241 246 252);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 0 136px;
 }
 
 .main-list__link {
@@ -10,4 +27,14 @@
   text-decoration: none;
   color: @black;
   padding: 16px 0 16px 40px;
+
+  .tablet ({
+    padding: 20px;
+  });
+}
+
+.main-list__item {
+  .tablet ({
+    flex-grow: 1;
+  });
 }
