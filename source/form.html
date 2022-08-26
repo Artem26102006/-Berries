@@ -52,13 +52,13 @@
           <h1 class="title order__title">Закажи ягоды</h1>
 
           <p class="order__text">
-            Мы соберем для вас ягоды<br />
+            Мы соберем для вас ягоды
             и доставим их в удобном для вас виде - свежими или замороженными
           </p>
         </div>
 
-        <div class="container">
-          <form class="form" action="http://echo.htmlacademy.ru/" method="post">
+        <div class="container order__container-form">
+          <form class="form order__form" action="http://echo.htmlacademy.ru/" method="post">
             <fieldset class="select form__select">
               <legend class="select__title">Выберите ягоды</legend>
 
@@ -70,7 +70,7 @@
                     name="berry"
                     value="lingonberry"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">брусника</span>
                 </label>
 
@@ -81,7 +81,7 @@
                     name="berry"
                     value="cherry"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">вишня</span>
                 </label>
 
@@ -92,7 +92,7 @@
                     name="berry"
                     value="blueberry"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">голубика</span>
                 </label>
 
@@ -103,7 +103,7 @@
                     name="berry"
                     value="bramble"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">ежевика</span>
                 </label>
 
@@ -114,7 +114,7 @@
                     name="berry"
                     value="stawberry"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">клубника</span>
                 </label>
 
@@ -125,7 +125,7 @@
                     name="berry"
                     value="cranberry"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">клюква</span>
                 </label>
 
@@ -136,18 +136,18 @@
                     name="berry"
                     value="gooseberry"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">крыжовник</span>
                 </label>
 
-                <label class="select__label">
+                <label class="select__label select__label--raspberry">
                   <input
                     type="checkbox"
                     class="select__input visually-hidden"
                     name="berry"
                     value="raspberry"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark select__checkbox-mark"></span>
                   <span class="select__name">малина</span>
                 </label>
 
@@ -158,18 +158,18 @@
                     name="berry"
                     value="cloudberry"
                   />
-                  <span class="checkbox-mark checkbox-mark--disabled"></span>
+                  <span class="checkbox-mark select__checkbox-mark checkbox-mark--disabled"></span>
                   <span class="select__name">морошка</span>
                 </label>
 
-                <label class="select__label">
+                <label class="select__label select__label--bilberry">
                   <input
                     type="checkbox"
                     class="select__input visually-hidden"
                     name="berry"
                     value="bilberry"
                   />
-                  <span class="checkbox-mark checkbox-mark--disabled"></span>
+                  <span class="checkbox-mark select__checkbox-mark checkbox-mark--disabled"></span>
                   <span class="select__name">черника</span>
                 </label>
               </div>
@@ -186,7 +186,7 @@
                     name="type"
                     value="fresh"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark type__checkbox-mark"></span>
                   <span class="type__name">cвежие ягоды</span>
                 </label>
 
@@ -197,7 +197,7 @@
                     name="type"
                     value="frozen"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark type__checkbox-mark"></span>
                   <span class="type__name">замороженные ягоды</span>
                 </label>
 
@@ -208,7 +208,7 @@
                     name="type"
                     value="mix"
                   />
-                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-mark type__checkbox-mark"></span>
                   <span class="type__name">ягодные миксы</span>
                 </label>
               </div>
@@ -225,9 +225,9 @@
                     name="delivery-method"
                     value="delivery"
                   />
-                  <span class="radio-mark"></span>
-                  <span class="delivery-method__name"
-                    >Доставка<br> (по СПБ в пределах<br> КАД)</span
+                  <span class="radio-mark delivery-method__radio-mark"></span>
+                  <span class="delivery-method__name delivery-method__name--br"
+                    >Доставка<br> (по СПБ в пределах КАД)</span
                   >
                 </label>
 
@@ -238,7 +238,7 @@
                     name="delivery-method"
                     value="pickup"
                   />
-                  <span class="radio-mark"></span>
+                  <span class="radio-mark delivery-method__radio-mark"></span>
                   <span class="delivery-method__name"
                     >Самовывоз<br> (Набережная Обводного канала, 101)</span
                   >
@@ -252,27 +252,27 @@
               </legend>
 
               <div class="your-contacts__wrapper">
-                <label class="your-contacts__label">
+                <label class="your-contacts__label your-contacts__label--name">
                   <span class="your-contacts__name your-contacts__name--key">Имя</span>
                   <input type="text" class="input your-contacts__input" name="name" placeholder="Как к вам обращаться?">
                 </label>
 
-                <label class="your-contacts__label">
+                <label class="your-contacts__label your-contacts__label--phone">
                   <span class="your-contacts__name your-contacts__name--key">Телефон</span>
                   <input type="tel" class="input your-contacts__input" name="number" placeholder="+7 ххх ххх хх хх">
                 </label>
 
-                <label class="your-contacts__label">
+                <label class="your-contacts__label your-contacts__label--email">
                   <span class="your-contacts__name your-contacts__name--key">Email</span>
                   <input type="email" class="input your-contacts__input" name="email" placeholder="Ваш email">
                 </label>
 
-                <label class="your-contacts__label">
+                <label class="your-contacts__label your-contacts__label--address">
                   <span class="your-contacts__name your-contacts__name--key">Адрес</span>
                   <input type="text" class="input your-contacts__input your-contacts__input--address" name="address" placeholder="Адреc в Санкт-Петербурге">
                 </label>
 
-                <label class="wishes your-contacts__wishes">
+                <label class="wishes your-contacts__wishes your-contacts__label--wishes">
                   <span class="wishes__name">Пожелания к заказу</span>
                   <textarea class="wishes__text" placeholder="Чем мы можем вам помочь?"></textarea>
                 </label>

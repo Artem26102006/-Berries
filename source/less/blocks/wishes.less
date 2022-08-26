@@ -3,6 +3,13 @@
   font-size: 14px;
   margin-left: 23px;
   margin-bottom: 12px;
+
+  .tablet ({
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 9px;
+    margin-left: 14px;
+  });
 }
 
 .wishes__text {
@@ -13,8 +20,16 @@
   font-size: 16px;
   resize: none;
   outline: 0;
-  border: 2px solid @green;
+  border: 1px solid @green;
   border-radius: 20px;
   padding: 16px 12px;
   color: @gray;
+
+  &:hover {
+    border: 1px solid @green-hover;
+  }
+
+  &:focus {
+    border: 1px solid @green-hover;
+  }
 }

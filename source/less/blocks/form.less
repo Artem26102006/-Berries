@@ -2,27 +2,55 @@
   .line-leaf ();
   position: relative;
   padding: 82px 0 0 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .form__select {
   margin-bottom: 36px;
+
+  @media (min-width: 460px) {
+    margin-bottom: 0;
+  }
+
+  .tablet ({
+    margin-bottom: 50px;
+  });
+
+  .desktop ({
+    margin-bottom: 57px;
+  });
 }
 
 .form__type {
   margin-bottom: 36px;
+
+  .tablet ({
+    margin-bottom: 48px
+  });
 }
 
 .form__delivery-method {
   margin-bottom: 36px;
+
+  .tablet ({
+    margin-bottom: 48px
+  });
 }
 
 .form__your-contacts {
   margin-bottom: 29px;
+
+  .tablet ({
+    margin-bottom: 40px
+  });
 }
 
 .form__button {
   padding: 16px 0;
+
+  .tablet ({
+    width: 336px;
+    margin: 0 auto;
+    font-size: 28px;
+  });
 }
 

@@ -3,14 +3,56 @@
   background-size: 100% 120px;
   padding-top: 194px;
   padding-bottom: 83px;
+
+  .tablet ({
+    background: url("../img/background-image-order-tablet.jpg") no-repeat;
+    background-size: 100% 200px;
+    padding-top: 300px;
+  });
+
+  .desktop ({
+    background: url("../img/background-image-order-desktop.jpg") no-repeat;
+    background-size: 100% 200px;
+  });
 }
 
 .order__title {
   margin-bottom: 35px;
+
+  .tablet ({
+    font-size: 52px;
+    margin-bottom: 48px;
+  });
 }
 
 .order__text {
   text-align: center;
-  margin: 0;
-  margin-bottom: 45px;
+  margin: 0 20px 41px;
+
+  .tablet ({
+    margin: 0 140px 36px;
+  });
+
+  .desktop ({
+    margin: 0 auto;
+    margin-bottom: 46px;
+    width: 520px;
+  });
+}
+
+.order__container-form {
+  .tablet ({
+    padding: 0 72px;
+  });
+
+  .desktop ({
+    padding: 0;
+  });
+}
+
+.order__form {
+  .desktop ({
+    width: 792px;
+    margin: 0 auto;
+  });
 }
