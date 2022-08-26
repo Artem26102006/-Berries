@@ -59,7 +59,7 @@
 
         <div class="container">
           <form class="form" action="http://echo.htmlacademy.ru/" method="post">
-            <fieldset class="select">
+            <fieldset class="select form__select">
               <legend class="select__title">Выберите ягоды</legend>
 
               <div class="select__wrapper">
@@ -175,7 +175,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="type">
+            <fieldset class="type form__type">
               <legend class="type__title">Вид хранения</legend>
 
               <div class="type__wrapper">
@@ -214,7 +214,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="delivery-method">
+            <fieldset class="delivery-method form__delivery-method">
               <legend class="delivery-method__title">Способ доставки</legend>
 
               <div class="delivery-method__wrapper">
@@ -246,7 +246,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="your-contacts">
+            <fieldset class="your-contacts form__your-contacts">
               <legend class="your-contacts__title">
                 Ваши контакты
               </legend>
@@ -274,10 +274,14 @@
 
                 <label class="wishes your-contacts__wishes">
                   <span class="wishes__name">Пожелания к заказу</span>
-                  <textarea class="wishes__text"></textarea>
+                  <textarea class="wishes__text" placeholder="Чем мы можем вам помочь?"></textarea>
                 </label>
               </div>
             </fieldset>
+
+            <button class="button form__button">
+              Заказать
+            </button>
           </form>
         </div>
       </section>
