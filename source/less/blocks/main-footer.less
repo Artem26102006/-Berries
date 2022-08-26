@@ -43,7 +43,6 @@
 .main-footer__text-link {
   font-family: "Raleway", "Arial", sans-serif;
   display: flex;
-  width: 110px;
   column-gap: 8px;
   align-items: center;
   margin-left: auto;
@@ -53,6 +52,10 @@
   color: @black;
   margin-top: 7px;
 
+  span {
+    flex: none;
+  }
+
   @media (min-width: 427px) {
     margin-top: 0;
   }
@@ -60,7 +63,6 @@
   .tablet ({
     font-size: 16px;
     line-height: 19px;
-    width: 153px;
     margin: 0;
 
     svg {

@@ -1,0 +1,35 @@
+.your-contacts {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.your-contacts__title {
+  padding: 0;
+  font-size: 20px;
+  color: @green;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.your-contacts__name {
+  margin-left: 12px;
+  margin-bottom: 8px;
+}
+
+.your-contacts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  gap: 36px;
+}
+
+.your-contacts__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.your-contacts__input {
+  &--address {
+    padding-bottom: 50px;
+  }
+}

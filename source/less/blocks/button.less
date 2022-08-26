@@ -6,6 +6,7 @@
   text-decoration: none;
   padding: 14px 0;
   cursor: pointer;
+  box-sizing: border-box;
   background-color: @purple;
   color: @white;
   font-size: 20px;
@@ -18,11 +19,23 @@
     background-color: @purple-hover;
   }
 
+  &:active {
+    background: none;
+    background-color: @purple;
+    opacity: .6;
+  }
+
   .tablet ({
     padding: 16px 0;
   });
 
   .desktop ({
+    font-size: 28px;
     padding: 16px 0 18px 0;
   });
+
+  &--small{
+    padding: 14px 0;
+    font-size: 20px;
+  }
 }

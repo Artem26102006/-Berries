@@ -1,13 +1,29 @@
 .navigation__button {
-  padding: 0;
   background: none;
+  border: none;
+  padding: 0;
+
+  svg {
+    fill: @green;
+  }
+
+  &:hover {
+    svg {
+      fill: @green-hover;
+    }
+  }
 
   .tablet ({
     display: none
-  });
+  });;
 }
 
 .navigation__main-list {
-  width: 496px;
-}
+  .tablet ({
+    width: 496px;
+  });
 
+  .desktop ({
+    width: 612px;
+  });
+}

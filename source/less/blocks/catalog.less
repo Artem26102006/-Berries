@@ -8,6 +8,14 @@
 
 .catalog__title {
   margin-bottom: 64px;
+
+  .tablet ({
+    margin-bottom: 72px;
+  });
+
+  .desktop ({
+    margin-bottom: 92px;
+  });
 }
 
 .catalog__content {
@@ -20,6 +28,13 @@
   .tablet ({
     margin: 0 68px;
     gap: 52px;
+  });
+
+  .desktop ({
+    margin: 0;
+    column-gap: 24px;
+    row-gap: 52px;
+    grid-template-columns: repeat(4, 264px);
   });
 }
 

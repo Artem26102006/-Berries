@@ -1,0 +1,23 @@
+.radio-mark {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 21px;
+  height: 21px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid @green;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: @green;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

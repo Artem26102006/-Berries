@@ -28,6 +28,14 @@
   color: @black;
   padding: 16px 0 16px 40px;
 
+  &:hover {
+    color: @green-hover;
+  }
+
+  &:active {
+    color: @green;
+  }
+
   .tablet ({
     padding: 20px;
   });
@@ -36,5 +44,10 @@
 .main-list__item {
   .tablet ({
     flex-grow: 1;
+  });
+
+  .desktop ({
+    width: 100%;
+    text-align: end;
   });
 }
