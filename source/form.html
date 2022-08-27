@@ -58,7 +58,7 @@
         </div>
 
         <div class="container order__container-form">
-          <form class="form order__form" action="http://echo.htmlacademy.ru/" method="post">
+          <form class="form order__form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="select form__select">
               <legend class="select__title">Выберите ягоды</legend>
 
@@ -254,22 +254,22 @@
               <div class="your-contacts__wrapper">
                 <label class="your-contacts__label your-contacts__label--name">
                   <span class="your-contacts__name your-contacts__name--key">Имя</span>
-                  <input type="text" class="input your-contacts__input" name="name" placeholder="Как к вам обращаться?">
+                  <input type="text" class="input your-contacts__input" name="name" placeholder="Как к вам обращаться?" required>
                 </label>
 
                 <label class="your-contacts__label your-contacts__label--phone">
                   <span class="your-contacts__name your-contacts__name--key">Телефон</span>
-                  <input type="tel" class="input your-contacts__input" name="number" placeholder="+7 ххх ххх хх хх">
+                  <input type="tel" class="input your-contacts__input" name="number" placeholder="+7 ххх ххх хх хх" required>
                 </label>
 
                 <label class="your-contacts__label your-contacts__label--email">
                   <span class="your-contacts__name your-contacts__name--key">Email</span>
-                  <input type="email" class="input your-contacts__input" name="email" placeholder="Ваш email">
+                  <input type="email" class="input your-contacts__input" name="email" placeholder="Ваш email" required>
                 </label>
 
                 <label class="your-contacts__label your-contacts__label--address">
                   <span class="your-contacts__name your-contacts__name--key">Адрес</span>
-                  <input type="text" class="input your-contacts__input your-contacts__input--address" name="address" placeholder="Адреc в Санкт-Петербурге">
+                  <input type="text" class="input your-contacts__input your-contacts__input--address" name="address" placeholder="Адреc в Санкт-Петербурге" required>
                 </label>
 
                 <label class="wishes your-contacts__wishes your-contacts__label--wishes">
@@ -279,7 +279,7 @@
               </div>
             </fieldset>
 
-            <button class="button form__button">
+            <button type="submit" class="button form__button">
               Заказать
             </button>
           </form>
