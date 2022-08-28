@@ -1,7 +1,15 @@
-let list = [1, 2, 3, 4, 5];
+let menu = document.querySelector(".main-list");
+let button = document.querySelector(".burger");
+let buttonOpen = document.querySelector(".burger__toggle");
+let buttonClose = document.querySelector(".burger__close");
+let header = document.querySelector(".main-header");
 
-let newList = list.reduce(function(arr, elem) {
-  return arr + elem
+header.classList.toggle("main-header--bottom");
+menu.classList.add("navigation__main-list--close");
+buttonOpen.classList.toggle("burger--unshow");
+
+button.addEventListener("click", function() {
+  buttonOpen.classList.toggle("burger--unshow");
+  buttonClose.classList.toggle("burger--unshow");
+  menu.classList.toggle("navigation__main-list--close");
 });
-
-console.log(newList);
