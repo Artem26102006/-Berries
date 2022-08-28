@@ -5,20 +5,12 @@
 
   .tablet ({
     display: flex;
-
+    column-gap: 17px;
   });
-}
 
-.main-list--open {
-  position: absolute;
-  display: block;
-  left: 0;
-  z-index: 2;
-  top: 67px;
-  background-color: rgb(241 246 252);
-  width: 100%;
-  box-sizing: border-box;
-  padding: 16px 0 136px;
+  .desktop ({
+    column-gap: 28px;
+  });
 }
 
 .main-list__link {
@@ -36,6 +28,14 @@
     color: @green;
   }
 
+  &--active {
+    color: @green;
+
+    &:hover {
+      color: @green;
+    }
+  }
+
   .tablet ({
     padding: 20px;
   });
@@ -43,11 +43,10 @@
 
 .main-list__item {
   .tablet ({
-    flex-grow: 1;
+    width: 112px;
   });
 
   .desktop ({
-    width: 100%;
-    text-align: end;
+    width: 132px;
   });
 }

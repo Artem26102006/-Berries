@@ -19,15 +19,19 @@
 
   .desktop ({
     text-align: start;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   });
 }
 
 .your-contacts__name {
   margin-left: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   font-size: 16px;
   line-height: 20px;
+
+  .tablet ({
+    margin-bottom: 3px;
+  });
 }
 
 .your-contacts__wrapper {
@@ -50,6 +54,18 @@
 .your-contacts__label {
   display: flex;
   flex-direction: column;
+
+  &--error {
+    .your-contacts__input, textarea {
+      border: 1px solid @red;
+    }
+  }
+
+  &--disabled {
+    .your-contacts__input, textarea {
+      border: 1px solid @gray;
+    }
+  }
 
   @media (min-width: 624px) {
     &--wishes {
@@ -99,7 +115,7 @@
     &--email {
       grid-column: 2 / -1;
     }
-  });
+  });;
 }
 
 .your-contacts__input {

@@ -1,12 +1,25 @@
 .logo {
   display: block;
 
-  svg {
+  .logo__image {
     fill: none;
+    color: @green;
+  }
+
+  &:hover {
+    .logo__image {
+      color: @green-hover;
+    }
+  }
+
+  &:active {
+    .logo__image {
+      color: @green-active;
+    }
   }
 
   .tablet ({
-    width: 130px;
+    width: 133px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,10 +27,23 @@
     .logo__image {
       width: 60px;
       height: 60px;
-      position: relative;
-      left: -5px;
-      bottom: 5px;
     }
+
+    &:hover {
+      .logo__text {
+        fill: @green-hover;
+      }
+    }
+
+    &:active {
+      .logo__text {
+        fill: @green-active;
+      }
+    }
+  });
+
+  .desktop ({
+    width: 136px;
   });
 }
 
@@ -26,5 +52,6 @@
 
   .tablet ({
     display: block;
+    fill: @green;
   });
 }

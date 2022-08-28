@@ -21,7 +21,7 @@
 
   .tablet ({
     font-size: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   });
 
   .desktop ({
@@ -37,13 +37,48 @@
   justify-content: space-between;
 
   .tablet ({
-    column-gap: 56px;
+    column-gap: 112px;
     justify-content: flex-start;
   });
 
   .desktop ({
-    column-gap: 48px
+    column-gap: 0;
+    width: 625px;
+    justify-content: space-between
   });
+}
+
+.type__checkbox-mark {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  border-radius: 5px;
+  border: 2px solid @green;
+}
+
+.type__input[type="checkbox"]:checked + .type__checkbox-mark::before {
+  content: "";
+  position: absolute;
+  width: 5.5px;
+  height: 2px;
+  transform: rotate(45deg);
+  top: 9px;
+  left: 2.5px;
+  background-color: @green;
+}
+
+.type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
+  content: "";
+  position: absolute;
+  top: 7.5px;
+  right: 2px;
+  transform: rotate(-45deg);
+  width: 9px;
+  height: 2px;
+  background-color: @green;
 }
 
 .type__label {
@@ -54,49 +89,40 @@
   width: fit-content;
 
   &:hover {
-    &:hover {
-      span {
-        color: @green-hover;
-      }
+    color: @green-hover;
 
-      .type__checkbox-mark {
-        border: 2px solid @green-hover;
-      }
+    .type__checkbox-mark {
+      border: 2px solid @green-hover;
+    }
 
-      .type__input[type="checkbox"]:checked + .type__checkbox-mark::before {
-        background-color: @green-hover;
-      }
+    .type__input[type="checkbox"]:checked + .type__checkbox-mark::before {
+      background-color: @green-hover;
+    }
 
-      .type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
-        background-color: @green-hover;
-      }
+    .type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
+      background-color: @green-hover;
     }
   }
 
   .tablet ({
     font-size: 18px;
     line-height: 22px;
-  });;
-}
+    column-gap: 22px;
 
-.type__input[type="checkbox"]:checked + .type__checkbox-mark::before {
-  content: "";
-  position: absolute;
-  width: 5.5px;
-  height: 2px;
-  transform: rotate(45deg);
-  top: 9px;
-  left: 2px;
-  background-color: @green;
-}
+    &--frozen {
+      order: 2;
+    }
 
-.type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
-  content: "";
-  position: absolute;
-  top: 7.3px;
-  right: 2px;
-  transform: rotate(-45deg);
-  width: 9px;
-  height: 2px;
-  background-color: @green;
+    &--mix {
+      column-gap: 14px;
+    }
+  });
+
+  .desktop ({
+    &--frozen {
+      order: 0;
+    }
+
+    column-gap: 13px;
+  });
 }

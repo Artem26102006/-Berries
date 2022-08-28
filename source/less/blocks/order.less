@@ -1,42 +1,75 @@
 .order {
+  .line-leaf ();
+  &::after {
+    bottom: -25px;
+  }
+
+  position: relative;
   background: url("../img/background-image-order-mobile.jpg") no-repeat;
   background-size: 100% 120px;
-  padding-top: 194px;
-  padding-bottom: 83px;
+  padding-top: 182px;
+  padding-bottom: 99px;
 
   .tablet ({
     background: url("../img/background-image-order-tablet.jpg") no-repeat;
     background-size: 100% 200px;
     padding-top: 300px;
+    padding-bottom: 105px;
+
+    &::after {
+      bottom: -40px;
+    }
   });
 
   .desktop ({
     background: url("../img/background-image-order-desktop.jpg") no-repeat;
     background-size: 100% 200px;
+    padding-bottom: 101px;
   });
 }
 
 .order__title {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 
   .tablet ({
     font-size: 52px;
-    margin-bottom: 48px;
-  });
+    margin-bottom: 52px;
+  });;
 }
 
 .order__text {
   text-align: center;
-  margin: 0 20px 41px;
+  word-break: break-all;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 32px 41px;
 
   .tablet ({
-    margin: 0 140px 36px;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 auto;
+    margin-right: 145px;
+    margin-bottom: 36px;
+    width: calc(100% - 38%);
   });
 
   .desktop ({
-    margin: 0 auto;
-    margin-bottom: 46px;
-    width: 520px;
+    margin: 0 auto 46px;
+    width: 511px;
+  });
+}
+
+.order__container-descrip {
+  .line-leaf ();
+  position: relative;
+  padding-bottom: 33px;
+
+  .tablet ({
+    padding-bottom: 42px;
+  });
+
+  .desktop ({
+    padding-bottom: 43px;
   });
 }
 
@@ -52,7 +85,7 @@
 
 .order__form {
   .desktop ({
-    width: 792px;
-    margin: 0 auto;
-  });
+    width: 791px;
+    margin-left: 194px;
+  });;
 }

@@ -19,17 +19,18 @@
   grid-auto-flow: dense;
   grid-auto-rows: 1fr;
   row-gap: 32px;
-  column-gap: 24px;
+  column-gap: 20px;
 
   .tablet ({
     grid-template-rows: repeat(4, 1fr);
-    row-gap: 20px;
+    row-gap: 24px;
   });
 
   .desktop ({
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 24px;
+    grid-template-columns: 118px 115px 117px 134px 115px;
     column-gap: 48px;
+    row-gap: 24px;
   });
 }
 
@@ -50,18 +51,56 @@
   });
 }
 
+.select__checkbox-mark {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  border-radius: 5px;
+  border: 2px solid @green;
+}
+
+
+.select__input[type="checkbox"]:checked + .select__checkbox-mark::before {
+  content: "";
+  position: absolute;
+  width: 5.5px;
+  height: 2px;
+  transform: rotate(45deg);
+  top: 9px;
+  left: 2.5px;
+  background-color: @green;
+}
+
+.select__input[type="checkbox"]:checked + .select__checkbox-mark::after {
+  content: "";
+  position: absolute;
+  top: 7.5px;
+  right: 2px;
+  transform: rotate(-45deg);
+  width: 9px;
+  height: 2px;
+  background-color: @green;
+}
+
 .select__label {
   display: flex;
   align-items: center;
   column-gap: 12px;
   font-size: 16px;
 
-  &:hover {
-    span {
-      color: @green-hover;
+  &--disabled {
+    .select__checkbox-mark {
+      border: 2px solid @gray;
     }
+  }
 
-    .select__checkbox-mark:not(.select__checkbox-mark--disabled) {
+  &:hover:not(&--disabled) {
+    color: @green-hover;
+
+    .select__checkbox-mark {
       border: 2px solid @green-hover;
     }
 
@@ -106,6 +145,14 @@
       display: none;
     }
 
+    &--cherry {
+      grid-column: 1 / 2;
+    }
+
+    &--stawberry {
+      grid-column: 2 / 3;
+    }
+
     &--cranberry {
       grid-column: 2 / 3;
     }
@@ -136,31 +183,13 @@
       grid-column: 4 / 5;
     }
 
+    &--blueberry {
+      grid-column: 2 / 3;
+    }
+
     &--bilberry {
       grid-column: 5 / -1;
       grid-row: 1 / 2;
     }
-  });;
-}
-
-.select__input[type="checkbox"]:checked + .select__checkbox-mark::before {
-  content: "";
-  position: absolute;
-  width: 5.5px;
-  height: 2px;
-  transform: rotate(45deg);
-  top: 9px;
-  left: 2.5px;
-  background-color: @green;
-}
-
-.select__input[type="checkbox"]:checked + .select__checkbox-mark::after {
-  content: "";
-  position: absolute;
-  top: 7.5px;
-  right: 2px;
-  transform: rotate(-45deg);
-  width: 9px;
-  height: 2px;
-  background-color: @green;
+  });
 }

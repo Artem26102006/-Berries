@@ -4,16 +4,7 @@
   padding-bottom: 20px;
 
   .tablet ({
-    padding: 25px 0 22px 0;
-  });
-}
-
-.main-footer__social-list {
-  margin-left: auto;
-
-  .tablet ({
-    margin: 0;
-    margin-left: 35px;
+    padding: 23px 0 22px 0;
   });
 }
 
@@ -21,6 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  row-gap: 7px;
 
   @media (max-width: 427px) {
     column-gap: 40px;
@@ -37,6 +29,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: 21px;
+  });
+
+  .desktop ({
+    padding-left: 0;
+    padding-right: 0;
+  });
+}
+
+.main-footer__social-list {
+  margin-left: auto;
+
+  .tablet ({
+    margin: 7px -1px 0 35px;
+  });
+
+  .desktop ({
+    margin-top: 0;
+    margin-right: 2px;
   });
 }
 
@@ -50,11 +61,27 @@
   line-height: 13px;
   text-decoration: none;
   color: @black;
-  margin-top: 7px;
 
   span {
     flex: none;
   }
+
+  &:hover {
+    color: @green-hover;
+
+    svg {
+      fill: @green-hover;
+    }
+  }
+
+  &:active {
+    color: @green;
+
+    svg {
+      fill: @green;
+    }
+  }
+
 
   @media (min-width: 427px) {
     margin-top: 0;
@@ -64,10 +91,15 @@
     font-size: 16px;
     line-height: 19px;
     margin: 0;
+    margin-top: 7px;
 
     svg {
       width: 26px;
       height: 32px;
     }
+  });
+
+  .desktop ({
+    margin-right: 5px;
   });
 }

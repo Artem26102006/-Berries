@@ -14,7 +14,7 @@
   width: 184px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   color: @green;
 
   &:hover {
@@ -43,16 +43,21 @@
 }
 
 .product__characteristics {
-  margin: 0;
-  font-family: "Raleway", "Arial", sans-serif;
+  font-family: "Raleway","Arial",sans-serif;
   font-size: 18px;
   font-style: normal;
   display: flex;
-  column-gap: 12px;
-  justify-content: center;
-  margin-bottom: 38px;
+  flex-wrap: wrap;
+  width: 116px;
+  justify-content: space-between;
+  margin: 0 auto 37px;
+}
+
+.product__price {
+  width: 52px;
 }
 
 .product__weight {
+  width: 52px;
   margin: 0;
 }

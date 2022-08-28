@@ -1,15 +1,15 @@
 .our-contacts {
-  .line-leaf ();
   position: relative;
-  padding-top: 96px;
-  padding-bottom: 64px;
+  padding-top: 84px;
+  padding-bottom: 59px;
 
   .tablet ({
-    padding: 114px 0 100px 0;
+    padding: 71px 0 100px 0;
   });
 
   .desktop ({
-    padding-top: 140px;
+    padding-top: 98px;
+    padding-bottom: 98px;
   });
 }
 
@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    column-gap: 26px
+    column-gap: 25px;
   });
 }
 
@@ -42,41 +42,55 @@
 }
 
 .our-contacts__title {
-  margin-bottom: 64px;
+  margin-bottom: 61px;
+  margin-right: 10px;
 
   .tablet ({
+    margin-right: 0;
+    padding-right: 9px;
     margin-bottom: 72px;
   });
 
   .desktop ({
-    margin-bottom: 48px;
+    margin-bottom: 51px;
+    padding: 4px 7px 0 0;
   });
 }
 
 .our-contacts__text {
   font-family: "Raleway", "Arial", sans-serif;
-  margin: 0;
+  margin: 0 auto;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
+  width: calc(100% - 20px);
 
   .tablet ({
+    width: auto;
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     text-align: center;
+  });
+
+  .desktop ({
+    width: 400px;
+    margin-bottom: 27px;
+    margin-left: 90px
   });
 }
 
 .our-contacts__list {
   .list ();
+  width: calc(100% - 5%);
+  margin: 0 auto;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 18px;
+  row-gap: 18.5px;
   column-gap: 24px;
   align-items: center;
   justify-content: space-between;
@@ -86,13 +100,19 @@
     line-height: 20px;
     width: 400px;
     margin: 0 auto;
+    row-gap: 22px;
+  });
+
+  .desktop ({
+    margin-left: 101px;
+    width: 400px;
   });
 }
 
 .our-contacts__item {
   .tablet ({
     width: 100%;
-  });
+  });;
 }
 
 .our-contacts__link {
@@ -101,7 +121,7 @@
   color: @black;
   display: flex;
   column-gap: 13px;
-  align-items: center;
+  align-items: flex-start;
 
   address {
     font-style: normal;
@@ -145,5 +165,5 @@
   .desktop ({
     width: 552px;
     height: 372px;
-  });
+  });;
 }

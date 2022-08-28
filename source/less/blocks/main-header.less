@@ -1,8 +1,14 @@
 .main-header {
   background-color: @blue-gray;
-  padding-top: 8px;
+  padding: 8px 0;
   position: relative;
-  box-shadow: 0 4px 4px rgb(146 81 155 / 37%);
+  box-shadow: 0 0px 10px 0px @purple;
+
+  &--bottom {
+    @media (max-width: 767px) {
+      padding-bottom: 377px;
+    }
+  }
 
   .tablet ({
     padding-top: 0;

@@ -1,11 +1,18 @@
 .form {
-  .line-leaf ();
   position: relative;
-  padding: 82px 0 0 0;
+  padding: 48px 0 0 0;
+
+  .tablet ({
+    padding: 72px 0 0 0;
+  });
+
+  .desktop ({
+    padding: 61px 0 0 0;
+  });
 }
 
 .form__select {
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 
   @media (min-width: 460px) {
     margin-bottom: 0;
@@ -21,18 +28,22 @@
 }
 
 .form__type {
-  margin-bottom: 36px;
+  margin-bottom: 31px;
 
   .tablet ({
-    margin-bottom: 48px
+    margin-bottom: 48px;
   });
 }
 
 .form__delivery-method {
-  margin-bottom: 36px;
+  margin-bottom: 31px;
 
   .tablet ({
-    margin-bottom: 48px
+    margin-bottom: 43px;
+  });
+
+  .desktop ({
+    margin-bottom: 45px;
   });
 }
 
@@ -40,17 +51,29 @@
   margin-bottom: 29px;
 
   .tablet ({
-    margin-bottom: 40px
+    margin-bottom: 40px;
+  });
+
+  .desktop ({
+    margin-bottom: 44px;
   });
 }
 
 .form__button {
-  padding: 16px 0;
+  padding: 14px 0 15px 0;
+  width: calc(100% - 4px);
+  letter-spacing: 2.4px;
 
   .tablet ({
     width: 336px;
     margin: 0 auto;
     font-size: 28px;
+  });
+
+  .desktop ({
+    margin-left: 199px;
+    padding-top: 16px;
+    padding-bottom: 18px;
   });
 }
 
