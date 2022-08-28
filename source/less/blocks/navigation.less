@@ -1,0 +1,38 @@
+.navigation__main-list {
+  &--open {
+    @media (max-width: 767px) {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      top: 68px;
+      width: 100%;
+      min-height: 360px;
+      transform: translateX(-50%);
+      display: block;
+      z-index: 1;
+      background-color: @blue-gray;
+      box-sizing: border-box;
+      padding: 16px 0 136px;
+      background: @blue-gray
+        linear-gradient(180deg, rgba(88, 13, 101, 0.53), rgba(0, 0, 0, 0) 2.2%);
+    }
+  }
+
+  &--close {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .tablet ({
+    width: 496px;
+    margin-right: 21px;
+  });
+
+  .desktop ({
+    width: 612px;
+    margin-right: 55px;
+  });
+}

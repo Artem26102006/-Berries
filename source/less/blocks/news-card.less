@@ -1,0 +1,101 @@
+.news-card {
+  font-family: "Raleway", "Arial", sans-serif;
+  border: 2px solid @green;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 28px 19px 72px 18px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .tablet ({
+    display: grid;
+    grid-template-rows: 1fr 2fr auto;
+    padding: 29px 35px 85px;
+    min-height: 494px;
+    row-gap: 24px;
+  });
+
+  .desktop ({
+    min-height: 492px;
+    row-gap: 0;
+    padding-left: 34.5px;
+    padding-right: 36.5px;
+    padding-bottom: 67px;
+  });
+}
+
+.news-card::after {
+  content: url("../img/icons/one-leaf.svg");
+  position: absolute;
+  width: 76px;
+  height: 32px;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .tablet ({
+    width: 96px;
+    height: 40px;
+    bottom: 40px;
+  });
+}
+
+.news-card__title {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 19.5px;
+  line-height: 24px;
+  display: flex;
+  text-align: center;
+  min-height: 68px;
+
+  span {
+    margin: auto;
+    width: 200px;
+  }
+
+  .tablet ({
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 0;
+
+    span {
+      width: auto;
+    }
+  });
+
+  .desktop ({
+    margin-bottom: 25px;
+  });
+}
+
+.news-card__review {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+
+  .tablet ({
+    font-size: 16px;
+    line-height: 20px;
+  });
+}
+
+.news-card__data {
+  font-size: 14px;
+  margin-top: auto;
+  text-align: end;
+
+  .tablet ({
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    bottom: 18px;
+  });
+
+  .desktop ({
+    bottom: 37px;
+  });
+}

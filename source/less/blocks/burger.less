@@ -1,0 +1,27 @@
+.burger {
+  background: none;
+  border: none;
+  padding: 0;
+
+  &--unshow {
+    display: none;
+  }
+
+  svg {
+    fill: @green;
+  }
+
+  &:hover {
+    svg {
+      fill: @green-hover;
+    }
+  }
+
+  .tablet ({
+    display: none;
+  });
+}
+
+.burger__close {
+  opacity: 0.75;
+}

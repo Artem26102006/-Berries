@@ -1,0 +1,52 @@
+.main-list {
+  .list ();
+  font-family: "Raleway";
+  display: none;
+
+  .tablet ({
+    display: flex;
+    column-gap: 17px;
+  });
+
+  .desktop ({
+    column-gap: 28px;
+  });
+}
+
+.main-list__link {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: @black;
+  padding: 16px 0 16px 40px;
+
+  &:hover {
+    color: @green-hover;
+  }
+
+  &:active {
+    color: @green;
+  }
+
+  &--active {
+    color: @green;
+
+    &:hover {
+      color: @green;
+    }
+  }
+
+  .tablet ({
+    padding: 20px;
+  });
+}
+
+.main-list__item {
+  .tablet ({
+    width: 112px;
+  });
+
+  .desktop ({
+    width: 132px;
+  });
+}

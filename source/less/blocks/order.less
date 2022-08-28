@@ -1,0 +1,123 @@
+.order {
+  .line-leaf ();
+  &::after {
+    bottom: -25px;
+  }
+
+  position: relative;
+  padding-top: 182px;
+  padding-bottom: 99px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-color: @red;
+    background: url("../img/background-image-order-mobile.jpg") no-repeat;
+    background-size: 100% 120px;
+    top: 0;
+    left: 0;
+
+    .retina ({
+      background: url("../img/background-image-order-mobile@2x.jpg") no-repeat;
+      background-size: 100% 120px;
+    });
+
+    .tablet ({
+      background: url("../img/background-image-order-tablet.jpg") no-repeat;
+      height: 200px;
+      background-size: 100% 200px;
+
+      .retina ({
+        background: url("../img/background-image-order-tablet@2x.jpg") no-repeat;
+        background-size: 100% 200px;
+      });
+    });
+
+    .desktop ({
+      background: url("../img/background-image-order-desktop.jpg") no-repeat;
+
+      .retina ({
+        background: url("../img/background-image-order-desktop@2x.jpg") no-repeat;
+        background-size: 100% 200px;
+      });
+    });
+  }
+
+  .tablet ({
+    padding-top: 300px;
+    padding-bottom: 105px;
+
+    &::after {
+      bottom: -40px;
+    }
+  });
+
+  .desktop ({
+    background-size: 100% 200px;
+    padding-bottom: 101px;
+  });
+}
+
+.order__title {
+  margin-bottom: 32px;
+
+  .tablet ({
+    font-size: 52px;
+    margin-bottom: 52px;
+  });;
+}
+
+.order__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 27px 41px;
+
+  .tablet ({
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 auto;
+    margin-right: 145px;
+    margin-bottom: 36px;
+    width: calc(100% - 38%);
+  });
+
+  .desktop ({
+    margin: 0 auto 46px;
+    width: 511px;
+  });
+}
+
+.order__container-descrip {
+  .line-leaf ();
+  position: relative;
+  padding-bottom: 33px;
+
+  .tablet ({
+    padding-bottom: 42px;
+  });
+
+  .desktop ({
+    padding-bottom: 43px;
+  });
+}
+
+.order__container-form {
+  .tablet ({
+    padding: 0 72px;
+  });
+
+  .desktop ({
+    padding: 0;
+  });
+}
+
+.order__form {
+  .desktop ({
+    width: 791px;
+    margin-left: 194px;
+  });;
+}

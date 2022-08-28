@@ -1,0 +1,57 @@
+.logo {
+  display: block;
+
+  .logo__image {
+    fill: none;
+    color: @green;
+  }
+
+  &:hover {
+    .logo__image {
+      color: @green-hover;
+    }
+  }
+
+  &:active {
+    .logo__image {
+      color: @green-active;
+    }
+  }
+
+  .tablet ({
+    width: 133px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo__image {
+      width: 60px;
+      height: 60px;
+    }
+
+    &:hover {
+      .logo__text {
+        fill: @green-hover;
+      }
+    }
+
+    &:active {
+      .logo__text {
+        fill: @green-active;
+      }
+    }
+  });
+
+  .desktop ({
+    width: 136px;
+  });
+}
+
+.logo__text {
+  display: none;
+
+  .tablet ({
+    display: block;
+    fill: @green;
+  });
+}

@@ -1,0 +1,50 @@
+.benefits {
+  .list ();
+  font-family: "Raleway", "Arial", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 13.5px;
+  font-size: 16px;
+  line-height: 20px;
+
+  .tablet ({
+    font-size: 18px;
+    line-height: 22px;
+    row-gap: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 140px;
+  });
+
+  .desktop ({
+    column-gap: 0;
+    row-gap: 19px;
+  });
+}
+
+.benefits__item {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+
+  &--leaf::before {
+    content: url("../img/icons/leaf.svg");
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+
+  &--snowflake::before {
+    content: url("../img/icons/snowflake.svg");
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+
+  &--delivery::before {
+    content: url("../img/icons/delivery.svg");
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+}

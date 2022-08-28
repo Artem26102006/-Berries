@@ -1,0 +1,40 @@
+.tablet (@rules) {
+  @media (min-width: @tablet-width) {
+    @rules();
+  }
+}
+
+.desktop (@rules) {
+  @media (min-width: @desktop-width) {
+    @rules();
+  }
+}
+
+.retina (@rules) {
+  @media (min-resolution: 2dppx) {
+    @rules();
+  }
+}
+
+.line-leaf () {
+  &::after {
+    content: url(../img/icons/line-leaf.svg);
+    position: absolute;
+    width: 228px;
+    height: 34px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .tablet ({
+      width: 296px;
+      height: 42px;
+    });
+  }
+}
+
+.list () {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

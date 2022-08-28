@@ -1,0 +1,27 @@
+.main-header {
+  background-color: @blue-gray;
+  padding: 8px 0;
+  position: relative;
+  box-shadow: 0 0px 10px 0px @purple;
+
+  &--bottom {
+    @media (max-width: 767px) {
+      padding-bottom: 377px;
+    }
+  }
+
+  .tablet ({
+    padding-top: 0;
+    padding: 20px 0;
+  });
+
+  .desktop ({
+    padding: 22px 0;
+  });
+}
+
+.main-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
