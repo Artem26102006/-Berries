@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Berries: Main Page</title>
+  <link rel="preload" href="fonts/Comfortaa-Regular.woff2" type="font/woff2" as="font" />
+  <link rel="preload" href="fonts/Raleway-Regular.woff2" type="font/woff2" as="font" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -23,16 +25,16 @@
 
       <nav class="navigation">
         <button type="button" class="burger">
-          <svg width="46" height="30" class="burger__toggle burger--unshow">
+          <svg width="46" height="30" class="burger__toggle burger__toggle--unshow">
             <use href="img/sprite.svg#burger"></use>
           </svg>
 
-          <svg width="28" height="28" class="burger__close burger--unshow">
+          <svg width="28" height="28" class="burger__close burger__close--unshow">
             <use href="img/sprite.svg#close"></use>
           </svg>
         </button>
 
-        <ul class="main-list navigation__main-list navigation__main-list--open navigation__main-list--close">
+        <ul class="main-list navigation__main-list navigation__main-list--open">
           <li class="main-list__item">
             <a href="#catalog" class="main-list__link"> Каталог </a>
           </li>
@@ -51,6 +53,7 @@
   </header>
 
   <main class="main page__main">
+    <h1 class="visually-hidden">Магазин "Ягода"</h1>
     <section class="banner">
       <div class="container banner__container">
         <div class="banner__wrapper">
@@ -69,7 +72,7 @@
             </li>
           </ul>
 
-          <a href="form.html" class="button banner__link">Заказать</a>
+          <a href="form.html" class="button button--big banner__link">Заказать</a>
         </div>
       </div>
     </section>
@@ -352,9 +355,14 @@
 
         <div class="our-contacts__map">
           <picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x" />
             <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x" />
             <img class="our-contacts__map-image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="" />
           </picture>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.132520538084!2d30.329035315987927!3d59.91334798186702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630519ea47935%3A0x3458dd62ea82672d!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0J7QsdCy0L7QtNC90L7Qs9C-INC60LDQvdCw0LvQsCwgMTAxLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkwMDEz!5e0!3m2!1sru!2sru!4v1661690846476!5m2!1sru!2sru"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>

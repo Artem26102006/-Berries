@@ -66,7 +66,7 @@
   width: 6px;
   height: 2px;
   transform: rotate(45deg);
-  top: 9.2px;
+  top: 10px;
   left: 4.7px;
   background-color: @green;
 }
@@ -74,7 +74,7 @@
 .type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 8.5px;
   right: 3px;
   transform: rotate(-45deg);
   width: 9px;
@@ -90,6 +90,22 @@
   width: fit-content;
 
   &:hover {
+    color: @green-hover;
+
+    .type__checkbox-mark {
+      border: 2px solid @green-hover;
+    }
+
+    .type__input[type="checkbox"]:checked + .type__checkbox-mark::before {
+      background-color: @green-hover;
+    }
+
+    .type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
+      background-color: @green-hover;
+    }
+  }
+
+  &:focus-within {
     color: @green-hover;
 
     .type__checkbox-mark {
