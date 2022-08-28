@@ -25,11 +25,11 @@
 
       <nav class="navigation">
         <button type="button" class="burger">
-          <svg width="46" height="30" class="burger__toggle burger__toggle--unshow">
+          <svg width="46" height="30" class="burger__toggle burger__toggle--unshow" aria-label="Открыть меню">
             <use href="img/sprite.svg#burger"></use>
           </svg>
 
-          <svg width="28" height="28" class="burger__close burger__close--unshow">
+          <svg width="28" height="28" class="burger__close burger__close--unshow" aria-label="Закрыть меню">
             <use href="img/sprite.svg#close"></use>
           </svg>
         </button>
@@ -85,6 +85,7 @@
           <li class="product catalog__item">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/raspberry-image.webp 1x, img/raspberry-image@2x.webp 2x">
                 <img class="product__image" src="img/raspberry-image.jpg" srcset="img/raspberry-image@2x.jpg 2x"
                   alt="Малина" />
               </picture>
@@ -107,6 +108,7 @@
           <li class="product catalog__item">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/bramble-image.webp 1x, img/bramble-image@2x.webp 2x">
                 <img class="product__image" src="img/bramble-image.jpg" srcset="img/bramble-image@2x.jpg 2x"
                   alt="Ежевика" />
               </picture>
@@ -129,6 +131,7 @@
           <li class="product catalog__item">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/lingonberry-image.webp 1x, img/lingonberry-image@2x.webp 2x">
                 <img class="product__image" src="img/lingonberry-image.jpg" srcset="img/lingonberry-image@2x.jpg 2x"
                   alt="Брусника" />
               </picture>
@@ -151,6 +154,7 @@
           <li class="product catalog__item">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/stawberry-image.webp 1x, img/stawberry-image@2x.webp 2x">
                 <img class="product__image" src="img/stawberry-image.jpg" srcset="img/stawberry-image@2x.jpg 2x"
                   alt="Клубника" />
               </picture>
@@ -173,6 +177,7 @@
           <li class="product catalog__item">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/cherry-image.webp 1x, img/cherry-image@2x.webp 2x">
                 <img class="product__image" src="img/cherry-image.jpg" srcset="img/cherry-image@2x.jpg 2x"
                   alt="Вишня" />
               </picture>
@@ -195,6 +200,7 @@
           <li class="product catalog__item">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/gooseberry-image.webp 1x, img/gooseberry-image@2x.webp 2x">
                 <img class="product__image" src="img/gooseberry-image.jpg" srcset="img/gooseberry-image@2x.jpg 2x"
                   alt="Крыжовник" />
               </picture>
@@ -217,6 +223,7 @@
           <li class="product catalog__item catalog__item--none">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/blueberry-image.webp 1x, img/blueberry-image@2x.webp 2x">
                 <img class="product__image" src="img/blueberry-image.jpg" srcset="img/blueberry-image@2x.jpg 2x"
                   alt="Голубика" />
               </picture>
@@ -239,8 +246,9 @@
           <li class="product catalog__item catalog__item--none">
             <a href="#">
               <picture>
+                <source type="image/webp" srcset="img/cranberry-image.webp 1x, img/cranberry-image@2x.webp 2x">
                 <img class="product__image" src="img/cranberry-image.jpg" srcset="img/cranberry-image@2x.jpg 2x"
-                  alt="Голубика" />
+                  alt="Клюква" />
               </picture>
             </a>
 
@@ -355,6 +363,8 @@
 
         <div class="our-contacts__map">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" />
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" />
             <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x" />
             <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x" />
             <img class="our-contacts__map-image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="" />

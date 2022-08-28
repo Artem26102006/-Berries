@@ -1,12 +1,9 @@
 .order {
   .line-leaf ();
+
   &::after {
     bottom: -25px;
   }
-
-  position: relative;
-  padding-top: 182px;
-  padding-bottom: 99px;
 
   &::before {
     content: "";
@@ -52,9 +49,13 @@
     });
   }
 
+  position: relative;
+  padding-top: 182px;
+  padding-bottom: 97px;
+
   .tablet ({
     padding-top: 300px;
-    padding-bottom: 145px;
+    padding-bottom: 148px;
 
     &::after {
       bottom: 0;
@@ -62,7 +63,7 @@
   });
 
   .desktop ({
-    background-size: 100% 200px;
+    padding-bottom: 144px;
   });
 }
 
