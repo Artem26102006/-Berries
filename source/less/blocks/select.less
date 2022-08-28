@@ -66,11 +66,11 @@
 .select__input[type="checkbox"]:checked + .select__checkbox-mark::before {
   content: "";
   position: absolute;
-  width: 5.5px;
+  width: 6px;
   height: 2px;
   transform: rotate(45deg);
-  top: 9px;
-  left: 2.5px;
+  top: 9.2px;
+  left: 4.7px;
   background-color: @green;
 }
 
@@ -78,7 +78,7 @@
   content: "";
   position: absolute;
   top: 7.5px;
-  right: 2px;
+  right: 3px;
   transform: rotate(-45deg);
   width: 9px;
   height: 2px;
@@ -94,6 +94,14 @@
   &--disabled {
     .select__checkbox-mark {
       border: 2px solid @gray;
+    }
+
+    .select__input[type="checkbox"]:checked + .select__checkbox-mark::before {
+      display: none;
+    }
+
+    .select__input[type="checkbox"]:checked + .select__checkbox-mark::after {
+      display: none;
     }
   }
 

@@ -10,6 +10,12 @@
   }
 }
 
+.retina (@rules) {
+  @media (min-resolution: 2dppx) {
+    @rules();
+  }
+}
+
 .line-leaf () {
   &::after {
     content: url(../img/icons/line-leaf.svg);

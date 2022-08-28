@@ -34,6 +34,7 @@
   flex-wrap: wrap;
   width: 100%;
   row-gap: 23px;
+  column-gap: 23px;
   justify-content: space-between;
 
   .tablet ({
@@ -62,19 +63,19 @@
 .type__input[type="checkbox"]:checked + .type__checkbox-mark::before {
   content: "";
   position: absolute;
-  width: 5.5px;
+  width: 6px;
   height: 2px;
   transform: rotate(45deg);
-  top: 9px;
-  left: 2.5px;
+  top: 9.2px;
+  left: 4.7px;
   background-color: @green;
 }
 
 .type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
   content: "";
   position: absolute;
-  top: 7.5px;
-  right: 2px;
+  top: 7px;
+  right: 3px;
   transform: rotate(-45deg);
   width: 9px;
   height: 2px;
