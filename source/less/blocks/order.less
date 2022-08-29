@@ -17,10 +17,20 @@
     top: 0;
     left: 0;
 
+    @supports (background: url("../img/background-image-order-mobile.webp")) {
+      background: url("../img/background-image-order-mobile.webp") no-repeat;
+      background-size: cover;
+    }
+
     .retina ({
       background: url("../img/background-image-order-mobile@2x.jpg") no-repeat;
       background-color: @red;
       background-size: 100% 120px;
+
+      @supports (background: url("../img/background-image-order-mobile@2x.webp")) {
+        background: url("../img/background-image-order-mobile@2x.webp") no-repeat;
+        background-size: 100% 120px;
+      }
     });
 
     .tablet ({
@@ -29,10 +39,20 @@
       height: 200px;
       background-size: cover;
 
+      @supports (background: url("../img/background-image-order-tablet.webp")) {
+        background: url("../img/background-image-order-tablet.webp") no-repeat;
+        background-size: cover;
+      }
+
       .retina ({
         background: url("../img/background-image-order-tablet@2x.jpg") no-repeat;
         background-color: @red;
         background-size: 100% 200px;
+
+        @supports (background: url("../img/background-image-order-tablet@2x.webp")) {
+          background: url("../img/background-image-order-tablet@2x.webp") no-repeat;
+          background-size: 100% 200px;
+        }
       });
     });
 
@@ -41,10 +61,20 @@
       background-color: @red;
       background-size: cover;
 
+      @supports (background: url("../img/background-image-order-desktop.webp")) {
+        background: url("../img/background-image-order-desktop.webp") no-repeat;
+        background-size: cover;
+      }
+
       .retina ({
         background: url("../img/background-image-order-desktop@2x.jpg") no-repeat;
         background-color: @red;
         background-size: 100% 200px;
+
+        @supports (background: url("../img/background-image-order-desktop@2x.webp")) {
+          background: url("../img/background-image-order-desktop@2x.webp") no-repeat;
+          background-size: 100% 200px;
+        }
       });
     });
   }
