@@ -67,19 +67,33 @@
   height: 2px;
   transform: rotate(45deg);
   top: 10px;
-  left: 4.7px;
+  left: 5px;
   background-color: @green;
+
+  .tablet ({
+    left: 4px;
+  });
+
+  .desktop ({
+    left: 4.3px;
+  });
 }
 
 .type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
   content: "";
   position: absolute;
-  top: 8.5px;
-  right: 3px;
-  transform: rotate(-45deg);
+  top: 8.7px;
+  right: 3.2px;
+  transform: rotate(-46deg);
   width: 9px;
   height: 2px;
   background-color: @green;
+
+  .tablet ({
+    width: 10px;
+    top: 9px;
+    right: 3.5px;
+  });
 }
 
 .type__label {
