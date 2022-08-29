@@ -5,7 +5,9 @@
 
   .tablet ({
     display: flex;
-    column-gap: 17px;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 16px;
   });
 
   .desktop ({
@@ -37,8 +39,12 @@
   }
 
   .tablet ({
-    padding: 20px;
+    padding: 40px 20px;
   });
+
+  .desktop ({
+    padding: 42px 20px;
+  })
 }
 
 .main-list__item {
