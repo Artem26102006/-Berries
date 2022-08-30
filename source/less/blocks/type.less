@@ -103,7 +103,22 @@
   font-size: 16px;
   width: fit-content;
 
-  &:hover {
+  // состояние checkbox кнопки disabled
+  &--disabled {
+    .type__checkbox-mark {
+      border: 2px solid @gray;
+    }
+
+    .type__input[type="checkbox"]:checked + .type__checkbox-mark::before {
+      display: none;
+    }
+
+    .type__input[type="checkbox"]:checked + .type__checkbox-mark::after {
+      display: none;
+    }
+  }
+
+  &:hover:not(&--disabled) {
     color: @green-hover;
 
     .type__checkbox-mark {
@@ -119,7 +134,7 @@
     }
   }
 
-  &:focus-within {
+  &:focus-within:not(&--disabled) {
     color: @green-hover;
 
     .type__checkbox-mark {

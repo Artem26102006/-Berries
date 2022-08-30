@@ -79,7 +79,18 @@
   font-size: 16px;
   flex-grow: 1;
 
-  &:hover {
+  // состояние radio кнопки disabled
+  &--disabled {
+    .delivery-method__radio-mark {
+      border: 2px solid @gray;
+    }
+
+    .delivery-method__input[type="radio"]:checked + .delivery-method__radio-mark::before {
+      display: none;
+    }
+  }
+
+  &:hover:not(&--disabled) {
     color: @green-hover;
 
     .delivery-method__radio-mark {
@@ -91,11 +102,11 @@
     }
   }
 
-  &:focus-within {
+  &:focus-within:not(&--disabled) {
     color: @green-hover;
 
     .delivery-method__radio-mark {
-      border: 2px solid @green-hover;;
+      border: 2px solid @green-hover;
     }
 
     .delivery-method__input[type="radio"]:checked + .delivery-method__radio-mark::before {
