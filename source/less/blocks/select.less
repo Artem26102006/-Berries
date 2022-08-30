@@ -62,27 +62,44 @@
   border: 2px solid @green;
 }
 
-
 .select__input[type="checkbox"]:checked + .select__checkbox-mark::before {
   content: "";
   position: absolute;
   width: 6px;
   height: 2px;
   transform: rotate(45deg);
-  top: 9.2px;
+  top: 10px;
   left: 4.7px;
   background-color: @green;
+
+  .tablet ({
+    top: 10.5px;
+    left: 4.5px;
+  });
+
+  .desktop ({
+    left: 4.5px;
+  });
 }
 
 .select__input[type="checkbox"]:checked + .select__checkbox-mark::after {
   content: "";
   position: absolute;
-  top: 7.5px;
-  right: 3px;
-  transform: rotate(-45deg);
-  width: 9px;
+  top: 9.5px;
+  right: 2.5px;
+  transform: rotate(-48deg);
+  width: 10px;
   height: 2px;
   background-color: @green;
+
+  .tablet ({
+    top: 9px;
+    right: 3px;
+  });
+
+  .desktop ({
+    right: 3.2px;
+  });
 }
 
 .select__label {
@@ -91,6 +108,7 @@
   column-gap: 12px;
   font-size: 16px;
 
+  // состояние checkbox кнопки disabled
   &--disabled {
     .select__checkbox-mark {
       border: 2px solid @gray;
@@ -106,6 +124,22 @@
   }
 
   &:hover:not(&--disabled) {
+    color: @green-hover;
+
+    .select__checkbox-mark {
+      border: 2px solid @green-hover;
+    }
+
+    .select__input[type="checkbox"]:checked + .select__checkbox-mark::before {
+      background-color: @green-hover;
+    }
+
+    .select__input[type="checkbox"]:checked + .select__checkbox-mark::after {
+      background-color: @green-hover;
+    }
+  }
+
+  &:focus-within:not(&--disabled) {
     color: @green-hover;
 
     .select__checkbox-mark {

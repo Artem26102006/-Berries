@@ -1,11 +1,6 @@
 .logo {
   display: block;
 
-  .logo__image {
-    fill: none;
-    color: @green;
-  }
-
   &:hover {
     .logo__image {
       color: @green-hover;
@@ -14,7 +9,7 @@
 
   &:active {
     .logo__image {
-      color: @green-active;
+      color: fade(@green, 50%);
     }
   }
 
@@ -24,11 +19,6 @@
     align-items: center;
     justify-content: space-between;
 
-    .logo__image {
-      width: 60px;
-      height: 60px;
-    }
-
     &:hover {
       .logo__text {
         fill: @green-hover;
@@ -37,7 +27,7 @@
 
     &:active {
       .logo__text {
-        fill: @green-active;
+        fill: fade(@green, 50%);;
       }
     }
   });
@@ -45,12 +35,46 @@
   .desktop ({
     width: 136px;
   });
+
+  &--unactive {
+    &:hover {
+      .logo__image {
+        color: @green;
+      }
+
+      .logo__text {
+        fill: @green;
+      }
+    }
+
+    &:active {
+      .logo__image {
+        color: @green;
+      }
+
+      .logo__text {
+        fill: @green;
+      }
+    }
+  }
+}
+
+.logo__image {
+  fill: none;
+  color: @green;
+  flex: none;
+
+  .tablet ({
+    width: 60px;
+    height: 60px;
+  });
 }
 
 .logo__text {
   display: none;
 
   .tablet ({
+    flex: none;
     display: block;
     fill: @green;
   });

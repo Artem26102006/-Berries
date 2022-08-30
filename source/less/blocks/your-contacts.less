@@ -25,13 +25,20 @@
 
 .your-contacts__name {
   margin-left: 12px;
-  margin-bottom: 2px;
+  margin-bottom: 2.5px;
   font-size: 16px;
   line-height: 20px;
 
-  .tablet ({
-    margin-bottom: 3px;
-  });
+  &--key {
+    &::after {
+      content: "*";
+      display: inline-block;
+      width: 5px;
+      height: 11px;
+      color: @red;
+      margin-left: 5px;
+    }
+  }
 }
 
 .your-contacts__wrapper {
@@ -54,18 +61,6 @@
 .your-contacts__label {
   display: flex;
   flex-direction: column;
-
-  &--error {
-    .your-contacts__input {
-      border: 1px solid @red;
-    }
-  }
-
-  &--disabled {
-    .your-contacts__input {
-      border: 1px solid @gray;
-    }
-  }
 
   @media (min-width: 624px) {
     &--wishes {

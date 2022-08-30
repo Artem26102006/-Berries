@@ -11,18 +11,18 @@
 
   .tablet ({
     display: grid;
-    grid-template-rows: 1fr 2fr auto;
+    grid-template-rows: minmax(100px, min-content) minmax(196px, min-content) auto;
     padding: 29px 35px 85px;
     min-height: 494px;
-    row-gap: 24px;
+    row-gap: 30px;
   });
 
   .desktop ({
     min-height: 492px;
-    row-gap: 0;
+    row-gap: 22px;
     padding-left: 34.5px;
     padding-right: 36.5px;
-    padding-bottom: 67px;
+    padding-bottom: 101px;
   });
 }
 
@@ -66,20 +66,18 @@
       width: auto;
     }
   });
-
-  .desktop ({
-    margin-bottom: 25px;
-  });
 }
 
 .news-card__review {
   font-size: 14px;
   line-height: 16px;
+  letter-spacing: 0.2px;
   margin: 0;
 
   .tablet ({
     font-size: 16px;
     line-height: 20px;
+    letter-spacing: 0.1px;
   });
 }
 
@@ -96,6 +94,6 @@
   });
 
   .desktop ({
-    bottom: 37px;
+    bottom: 5px;
   });
 }

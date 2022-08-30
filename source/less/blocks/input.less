@@ -11,11 +11,22 @@
   color: @gray;
   border-radius: 20px;
 
+  // состояние input - error
+  &--error {
+    border: 1px solid @red;
+  }
+
+  // состояние input - disabled
+  &--disabled {
+    border: 1px solid @gray;
+  }
+
   &:hover {
     border: 1px solid @green-hover;
   }
 
   &:focus {
     border: 1px solid @green-hover;
+    color: @black;
   }
 }
